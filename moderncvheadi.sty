@@ -37,15 +37,15 @@
 %                overall head definition
 %-------------------------------------------------------------------------------
 % fonts
-\renewcommand*{\namefont}{\fontsize{34}{36}\mdseries\upshape}
-\renewcommand*{\titlefont}{\LARGE\mdseries\slshape}
+\renewcommand*{\namefont}{\fontsize{16}{18}\mdseries\upshape}
+\renewcommand*{\titlefont}{\fontsize{12}{14}\mdseries\slshape}
 \renewcommand*{\addressfont}{\small\mdseries\slshape}
 \renewcommand*{\quotefont}{\large\slshape}
 
 % styles
 \renewcommand*{\namestyle}[1]{{\namefont\textcolor{color0}{#1}}}
 \renewcommand*{\titlestyle}[1]{{\titlefont\textcolor{color2}{#1}}}
-\renewcommand*{\addressstyle}[1]{{\addressfont\textcolor{color2}{#1}}}
+\renewcommand*{\addressstyle}[1]{{\addressfont\textcolor{color1}{#1}}}
 \renewcommand*{\quotestyle}[1]{{\quotefont\textcolor{color1}{#1}}}
 
 
@@ -72,7 +72,7 @@
     \collectionloop{socials}{% the key holds the social type (=symbol command prefix), the item holds the link
       \protected@edef\socialsdetails{\socialsdetails\protect\makenewline\csname\collectionloopkey socialsymbol\endcsname\collectionloopitem}}%
     \savebox{\makecvheaddetailsbox}{%
-      \addressfont\color{color2}%
+      \addressfont\color{color1}%
       \if@left\begin{tabular}[b]{@{}r@{}}\fi%
       \if@right\begin{tabular}[b]{@{}l@{}}\fi%
         \ifthenelse{\isundefined{\@addressstreet}}{}{\makenewline\addresssymbol\@addressstreet%
@@ -149,7 +149,7 @@
     % optional detailed information
     \if@details%
       \raggedleft%
-      \addressfont\textcolor{color2}{%
+      \addressfont\textcolor{color1}{%
         {\bfseries\upshape\@firstname~\@lastname}\@firstdetailselementfalse%
         % optional detailed information
         \ifthenelse{\isundefined{\@addressstreet}}{}{\makenewline\addresssymbol\@addressstreet%
